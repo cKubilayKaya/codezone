@@ -27,7 +27,7 @@ export default function Header() {
     },
   ];
   return (
-    <div className="min-h-20 bg-amber-700 flex items-center justify-center">
+    <div className="min-h-20 bg-main-black absolute top-0 left-0 w-full z-30 backdrop-blur-md bg-main-black-op flex items-center justify-center">
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
           <Image src="/images/header-logo.png" alt="Logo" width={235} height={60} />

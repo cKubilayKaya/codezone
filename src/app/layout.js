@@ -1,11 +1,18 @@
 import "./globals.css";
 import Header from "./Header";
-import { Saira } from "next/font/google";
+import { Saira, Saira_Condensed } from "next/font/google";
 
 const saira = Saira({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], // ihtiyacına göre seç
+  weight: ["400", "600", "700"],
   variable: "--font-saira",
+  display: "swap",
+});
+
+const saira_condensed = Saira_Condensed({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-saira-condensed",
   display: "swap",
 });
 
@@ -17,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${saira.variable} antialiased`}>
+      <body className={`${saira.variable} ${saira_condensed.variable} antialiased`}>
         <Header />
         {children}
       </body>

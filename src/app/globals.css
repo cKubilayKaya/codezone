@@ -9,9 +9,12 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-main-black: var(--main-black);
+  --color-secondary-black: var(--secondary-black);
+  --color-main-gray: var(--main-gray);
   --color-main-black-op: var(--main-black-op);
   --color-main-yellow: var(--main-yellow);
   --font-saira: var(--font-saira);
+  --font-saira-condensed: var(--font-saira-condensed);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +22,8 @@
     --background: rgba(18, 18, 18, 1);
     --foreground: #ededed;
     --main-black: rgba(30, 30, 30, 1);
+    --secondary-black: rgba(30, 30, 30, 1);
+    --main-gray: rgba(42, 42, 42, 1);
     --main-black-op: rgba(18, 18, 18, 0.1);
     --main-yellow: rgba(240, 231, 77, 1);
   }

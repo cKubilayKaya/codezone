@@ -1,9 +1,11 @@
 import Banner from "./Components/Banner";
+import Trends from "./Components/Trends";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Banner />
+      <Trends />
     </div>
   );
 }

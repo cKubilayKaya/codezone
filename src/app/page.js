@@ -1,4 +1,5 @@
 import Banner from "./Components/Banner";
+import Discover from "./Components/Discover";
 import Trends from "./Components/Trends";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Banner />
       <Trends />
+      <Discover />
     </div>
   );
 }

@@ -38,9 +38,9 @@ export default function Banner() {
           <SwiperSlide key={item.id}>
             <div className="py-8 relative min-h-[700px]">
               <img src={item.image} className="absolute top-0 left-0" alt="" />
-              <div className="w-[670px] absolute right-8 top-1/2 -translate-y-1/2">
+              <div className="w-[570px] absolute right-16 top-1/2 -translate-y-1/2 mt-10">
                 <h2 className={`font-bold text-6xl ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.title}</h2>
-                <p className={`mt-6 mb-8 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.text}</p>
+                <p className={`mt-6 w-[80%] mb-8 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.text}</p>
                 <CustomButton />
                 <div className="flex items-center mt-14 gap-2">
                   {slides.map((item, index) => (

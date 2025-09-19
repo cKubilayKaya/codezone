@@ -1,14 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./Header";
+import { Saira } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const saira = Saira({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700"], // ihtiyacına göre seç
+  variable: "--font-saira",
+  display: "swap",
 });
 
 export const metadata = {
@@ -19,9 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${saira.variable} antialiased`}>
+        <Header />
         {children}
       </body>
     </html>

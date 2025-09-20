@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import CustomButton from "./CustomButton";
+import "swiper/css";
 
 export default function Banner() {
   const swiperRef = useRef(null);
@@ -27,8 +27,9 @@ export default function Banner() {
   ];
 
   return (
-    <div>
+    <div className="relative pb-10">
       <Swiper
+        className=""
         spaceBetween={0}
         slidesPerView={1}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -38,9 +39,9 @@ export default function Banner() {
           <SwiperSlide key={item.id}>
             <div className="py-8 relative min-h-[700px]">
               <img src={item.image} className="absolute top-0 left-0" alt="" />
-              <div className="w-[570px] absolute right-16 top-1/2 -translate-y-1/2 mt-10">
-                <h2 className={`font-bold text-6xl ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.title}</h2>
-                <p className={`mt-6 w-[80%] mb-8 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.text}</p>
+              <div className="w-[570px] absolute right-16 top-1/2 -translate-y-1/2 mt-10  z-3">
+                <h2 className={`font-bold text-5xl leading-14 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.title}</h2>
+                <p className={`mt-6 w-[80%] mb-6 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.text}</p>
                 <CustomButton />
                 <div className="flex items-center mt-14 gap-2">
                   {slides.map((item, index) => (
@@ -54,6 +55,9 @@ export default function Banner() {
                   ))}
                 </div>
               </div>
+            </div>
+            <div className="mt-10">
+              <img src="/images/slider-bg.png" className="absolute bottom-0 left-0 z-2 w-full" alt="" />
             </div>
           </SwiperSlide>
         ))}

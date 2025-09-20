@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CompassIcon from "../icons/CompassIcon";
 import SearchIcon from "../icons/SearchIcon";
@@ -10,6 +11,7 @@ import DiscordIcon from "../icons/DiscordIcon";
 import SpotifyIcon from "../icons/SpotifyIcon";
 import YoutubeIcon from "../icons/YoutubeIcon";
 import Link from "next/link";
+import { blogData } from "../../data";
 
 export default function Discover() {
   const categories = [

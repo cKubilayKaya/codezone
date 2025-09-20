@@ -18,6 +18,7 @@
   --color-tertiary-gray: var(--tertiary-gray);
 
   --color-main-yellow: var(--main-yellow);
+  --color-main-yellow-op: var(--main-yellow-op);
 
   --font-saira: var(--font-saira);
   --font-saira-condensed: var(--font-saira-condensed);
@@ -30,13 +31,14 @@
 
     --main-black: rgba(30, 30, 30, 1);
     --secondary-black: rgba(30, 30, 30, 1);
-    --main-black-op: rgba(18, 18, 18, 0.1);
+    --main-black-op: rgba(18, 18, 18, 0.466);
 
     --main-gray: rgba(42, 42, 42, 1);
     --secondary-gray: rgba(59, 59, 59, 1);
     --tertiary-gray: rgba(92, 92, 92, 1);
 
     --main-yellow: rgba(240, 231, 77, 1);
+    --main-yellow-op: rgba(142, 135, 13, 1);
   }
 }
 
@@ -44,4 +46,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Saira", sans-serif;
+}
+
+.container {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
 }

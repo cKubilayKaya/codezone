@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Live() {
   return (
-    <div className="relative pb-[300px]">
+    <div className="relative min-h-[600px]">
       <div className="flex items-center justify-center">
         <div className="flex items-center flex-col gap-3">
           <div className="flex items-center">

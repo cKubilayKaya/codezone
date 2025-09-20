@@ -1,10 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function Favorites() {
+  const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      images: "/images/album-1.png",
+    },
+    {
+      id: 2,
+      images: "/images/album-2.png",
+    },
+    {
+      id: 3,
+      images: "/images/album-1.png",
+    },
+    {
+      id: 4,
+      images: "/images/album-2.png",
+    },
+  ];
+
   return (
     <div className="mb-[160px]">
       <div className="relative w-fit">
@@ -21,19 +43,34 @@ export default function Favorites() {
         </div>
 
         <div className="absolute top-0 left-1/2 w-1/2">
-          <Swiper spaceBetween={52} slidesPerView={2.5} className="w-full">
-            <SwiperSlide>
-              <img src="/images/album-1.png" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/album-2.png" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/album-1.png" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/album-2.png" alt="" />
-            </SwiperSlide>
+          <Swiper
+            loop={true}
+            spaceBetween={52}
+            slidesPerView={2.5}
+            className="w-full"
+            onSlideChange={(swiper) => {
+              setActiveIndex(swiper.realIndex);
+              console.log(swiper.activeIndex, activeIndex);
+            }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+          >
+            {slides.map((item) => (
+              <SwiperSlide key={item?.id}>
+                <img src={item?.images} alt="" />
+              </SwiperSlide>
+            ))}
+            <div className="w-[80%] mx-auto mt-12 h-[5px] flex items-center">
+              {slides.map((item, index) => (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    swiperRef.current.slideToLoop(index);
+                    setActiveIndex(index);
+                  }}
+                  className={`cursor-pointer w-full h-full  ${index === activeIndex ? "bg-main-yellow" : "bg-main-gray"}`}
+                ></button>
+              ))}
+            </div>
           </Swiper>
         </div>
       </div>

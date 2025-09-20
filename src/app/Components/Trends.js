@@ -2,6 +2,7 @@ import React from "react";
 import TrendsIcon from "../icons/TrendsIcon";
 import Link from "next/link";
 import CustomButton from "./CustomButton";
+import ArrowRightIcon from "../icons/ArrowRightIcon";
 
 export default function Trends() {
   const trends = [
@@ -54,6 +55,7 @@ export default function Trends() {
       },
     },
   ];
+
   return (
     <div className="container mx-auto my-20 font-saira-condensed">
       <div className="flex items-center gap-5 mb-20">
@@ -62,19 +64,27 @@ export default function Trends() {
       </div>
       <div className="grid grid-cols-3 gap-x-5 gap-y-10 mb-20">
         {trends.map((item) => (
-          <div key={item?.id} className="min-h-[190px] flex gap-16">
+          <div key={item?.id} className="min-h-[190px] flex gap-16 group">
             <div>
-              <h2 className="text-main-gray font-bold text-6xl">{item?.id < 10 && `0${item?.id}`}</h2>
+              <h2 className="text-main-gray font-bold text-6xl transition duration-300 group-hover:text-main-yellow">{item?.id < 10 && `0${item?.id}`}</h2>
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex items-center gap-2">
                 <img src={item?.user?.avatar} alt="" />
                 <p className="font-saira">{item?.user?.name}</p>
               </div>
-              <p className="text-[25px] uppercase font-bold leading-7 line-clamp-3">{item?.title}</p>
+              <Link href="/" className="text-[25px] uppercase font-bold leading-7 line-clamp-3 transition duration-300 group-hover:text-main-yellow">
+                {item?.title}
+              </Link>
               <div className="bg-secondary-black h-[1px] w-full"></div>
-              <Link href="/" className="font-saira">
+              <Link href="/" className="font-saira transition duration-300 group-hover:text-main-yellow flex items-center gap-2 relative">
                 Daha Fazla Oku
+                <span
+                  className="opacity-0 translate-x-[-10px] scale-75 group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100
+               transition-all duration-300"
+                >
+                  <ArrowRightIcon />
+                </span>
               </Link>
             </div>
           </div>

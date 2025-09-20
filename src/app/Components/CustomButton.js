@@ -6,18 +6,18 @@ export default function CustomButton({ href = "/", variant = "primary", text = "
 
   const variantType = () => {
     if (variant === "primary") {
-      return `bg-main-yellow text-black`;
+      return `bg-main-yellow text-black group-hover:bg-black group-hover:text-white`;
     } else if (variant === "white") {
-      return `bg-foreground text-black`;
+      return `bg-foreground text-black group-hover:bg-main-yellow group-hover:text-main-black`;
     } else if (variant === "black") {
-      return `bg-background text-white`;
+      return `bg-background text-white group-hover:bg-main-yellow group-hover:text-main-black`;
     }
   };
 
   return (
     <div className="relative inline-block group">
       <div
-        className="absolute inset-0  bg-black transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-200 "
+        className="absolute inset-0 bg-black transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-200 cursor-pointer"
         style={{ clipPath: clip }}
         aria-hidden="true"
       />

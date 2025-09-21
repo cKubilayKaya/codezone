@@ -44,7 +44,7 @@ export default function Favorites() {
           <h2 className="font-saira-condensed font-bold text-4xl md:text-6xl text-center lg:text-left">AYIN FAVORİLERİ</h2>
         </div>
 
-        <div className="relative lg:absolute top-0 left-0 lg:left-1/2 w-full lg:w-1/2">
+        <div className="relative lg:absolute top-0 left-0 lg:left-1/2 w-full lg:w-1/2 ">
           <Swiper
             loop={true}
             spaceBetween={width < 640 ? 16 : 52}
@@ -56,8 +56,8 @@ export default function Favorites() {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {slides.map((item) => (
-              <SwiperSlide key={item?.id}>
-                <img src={item?.images} className="w-full h-full" alt="" />
+              <SwiperSlide key={item?.id} className="">
+                <img src={item?.images} className="w-full xl:w-[272px] h-full xl:h-[266px] object-fill" alt="" />
               </SwiperSlide>
             ))}
             <div className="w-[80%] mx-auto mt-12 h-[5px] flex items-center">

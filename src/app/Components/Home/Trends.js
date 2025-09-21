@@ -6,7 +6,7 @@ import CustomButton from "../CustomButton";
 import ArrowRightIcon from "../../icons/ArrowRightIcon";
 import { allBlogs } from "@/data/allBlogs";
 
-export default function Trends() {
+export default function Trends({ cols = 3 }) {
   const [trends, setTrends] = useState(allBlogs?.filter((i) => i?.attributes?.trend === true));
 
   return (
@@ -15,7 +15,7 @@ export default function Trends() {
         <h2 className="font-bold text-6xl ">TRENDLER</h2>
         <TrendsIcon />
       </div>
-      <div className="grid grid-cols-3 gap-x-5 gap-y-10 mb-20">
+      <div className={`grid grid-cols-${cols} gap-x-5 gap-y-10 mb-20`}>
         {trends.map((item, index) => (
           <div key={item?.attributes?.slug} className="min-h-[190px] flex gap-16 group">
             <div>

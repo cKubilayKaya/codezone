@@ -36,7 +36,9 @@ export default function BlogsPage() {
       </Head>
       <div className="mt-20">
         <div className="bg-main-yellow pt-20">
-          <Breadcrumb breadcrumbData={breadcrumbData} />
+          <div className="container mx-auto">
+            <Breadcrumb breadcrumbData={breadcrumbData} />
+          </div>
           <h2 className="my-8 font-saira-condensed font-bold text-4xl md:text-6xl container mx-auto text-main-black">BLOG</h2>
           <BlogsSlider slidersBlogs={slidersBlogs} trendBlogs={trendBlogs} />
         </div>

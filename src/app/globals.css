@@ -16,6 +16,7 @@
   --color-main-gray: var(--main-gray);
   --color-secondary-gray: var(--secondary-gray);
   --color-tertiary-gray: var(--tertiary-gray);
+  --color-quaternary-gray: var(--quaternary-gray);
 
   --color-main-yellow: var(--main-yellow);
   --color-main-yellow-op: var(--main-yellow-op);
@@ -36,6 +37,7 @@
     --main-gray: rgba(42, 42, 42, 1);
     --secondary-gray: rgba(59, 59, 59, 1);
     --tertiary-gray: rgba(92, 92, 92, 1);
+    --quaternary-gray: rgba(50, 50, 50, 1);
 
     --main-yellow: rgba(240, 231, 77, 1);
     --main-yellow-op: rgba(142, 135, 13, 1);

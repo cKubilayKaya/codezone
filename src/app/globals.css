@@ -23,6 +23,8 @@
 
   --font-saira: var(--font-saira);
   --font-saira-condensed: var(--font-saira-condensed);
+
+  --breakpoint-xxs: 27.5rem;
 }
 
 @media (prefers-color-scheme: dark) {

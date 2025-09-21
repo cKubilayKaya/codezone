@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Codezone Vaka Çalışması
 
-## Getting Started
+## [Canlı Link](https://markdownlivepreview.com/)
 
-First, run the development server:
+## Özellikler
+
+- Dummy data’ya sadık kalarak **```likes```**, **```view```**, **```comments```**, **```blogSlide```**, **```blogTrend```**, **```trend```** gibi özelliklerin eklenmesi.
+
+    * Örnek veri yapısı:
+
+    ```
+    {
+    attributes: {
+      category: "Haftanın Klipleri",
+      blogSlide: false,
+      blogTrend: false,
+      view: 79.8,
+      likes: 92,
+      comments: 40,
+      trend: false,
+      tags: ["Yeni Albüm", "Klip Yayında"],
+      author: {
+        name: "Cem MC",
+        avatar: "/images/avatar.png",
+      },
+      title: "Haftanın Viral Klipleri",
+      slug: "haftanin-viral-klipleri",
+      content: `<div class="flex flex-col gap-5">
+        <h3 class="font-bold font-saira-condensed text-[25px] leading-6 uppercase">
+          Bu hafta sosyal medyada en çok paylaşılan ve izlenme rekorları kıran viral rap kliplerini sizler için inceledik.
+        </h3>
+        <p>
+          Rap dünyasının nabzı bu hafta da viral kliplerle attı. Rapkology editörleri olarak, kısa sürede milyonlarca izlenmeye ulaşan ve sosyal medyada fırtınalar estiren bu klipleri mercek altına aldık. Klipler, sadece müzikleriyle değil, aynı zamanda yaratıcı konseptleri, etkileyici hikaye anlatımları ve modern prodüksiyonlarıyla da büyük beğeni topladı.
+        </p>
+        <img src="https://res.cloudinary.com/dgbjlgpfh/image/upload/v1756449589/softawe/lark.jpg.webp" alt="" />
+        <p>
+          Analizimizde, bu kliplerin neden bu kadar çok ilgi gördüğünü ve viral olmayı nasıl başardıklarını detaylı bir şekilde ele aldık. Kimi klipler mizahi unsurlarıyla, kimi klipler ise derin anlamlar içeren hikayeleriyle ön plana çıktı. Bu parçalar, rap müziğin güncel trendlerini ve dinleyicinin beklentilerini çok iyi yansıtıyor.
+        </p>
+        <p>
+          Bu hafta en çok konuşulan ve paylaşılan rap kliplerini kaçırmayın! Rapkology olarak, bu içeriklerin arkasındaki sanatsal ve teknik detayları sizlerle paylaşmaktan mutluluk duyuyoruz. Gelecek haftanın viral klipleri için de bizi takipte kalın.
+        </p>
+      </div>`,
+      seo: {
+        canonicalURL: "haftanin-viral-klipleri",
+        metaTitle: "Haftanın Viral Klipleri",
+        metaDescription: "Haftanın viral rap klipleri Rapkology tarafından analiz edildi. İzleyiciler için öne çıkan detaylar burada.",
+      },
+      img: "https://res.cloudinary.com/dgbjlgpfh/image/upload/v1756449589/softawe/lark.jpg.webp",
+      desc: "Haftanın viral rap klipleri, sosyal medyada trend olan parçalar.",
+    },
+    lang: "tr",
+    createdAt: "2025-06-20T12:00:00.000Z",
+    updatedAt: "2025-06-21T12:00:00.000Z",
+    __v: 0,
+  },
+    ```
+- Tamamen **responsive** tasarım ve mobil uyumlu menü.
+- **Keşfet** kısmındaki layout butonları ile blog kartlarının layout görünümünü değiştirebilme.
+- **Keşfet** kısmındaki kategori butonları ile blogları kategorilere göre filtreleme imkanı.
+- **Trendler** bölümü, ```trend:true``` olan bloglardan dinamik olarak geliyor.
+- **Blog** sayfasındaki sliderlar, ```blogSlide:true``` olan içeriklerden dinamik olarak geliyor.
+- **Blog** sayfasındaki slider'ın yanındaki bloglar, ```blogTrend:true``` olan içeriklerden dinamik olarak geliyor.
+- **Blog detay** sayfasındaki **"Daha Fazla İçerik"** bölümü rastgele içeriklerden seçiliyor.
+- **Blog detay** sayfasındaki **görüntülenme**, **beğeni** ve **yorum** sayıları ilgili blogun ```likes```, ```view``` ve ```comments``` özelliklerinden geliyor.
+- Blog içerikleri HTML string olarak tutuluyor ve **dangerouslySetInnerHTML** ile CSS’leri bozulmadan render ediliyor.
+- **Breadcrumb**, **meta title** ve **meta description** gibi **SEO** alanları dinamik ve doğru şekilde oluşturuluyor.
+
+## Teknolojiler ve Kütüphaneler
+
+- Reactjs
+- Nextjs
+- Tailwindcss
+- date-fns
+- swiperjs
+
+## Sayfa Yapısı
+
+├─ / (Anasayfa)
+├─ /blogs (Bloglar Sayfası)
+│  └─ /:slug (Blog Detay Sayfası)
+
+## Kurulum ve Çalıştırma
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcınızda http://localhost:3000 adresine giderek projeyi görüntüleyebilirsiniz.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

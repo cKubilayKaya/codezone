@@ -1,30 +1,35 @@
+import React from "react";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
 import Link from "next/link";
-import React from "react";
+import { format } from "date-fns";
+import { tr } from "date-fns/locale";
 
 export default function DiscoverBlogs({ gridType, blogs }) {
   return (
     <div className={gridType === "ONE_GRID" ? "flex flex-col gap-20" : "grid grid-cols-2 gap-5"}>
       {blogs.map((item) =>
         gridType === "ONE_GRID" ? (
-          <div className="flex gap-5 group" key={item?.id}>
+          <div className="flex gap-5 group" key={item?.attributes?.slug}>
             <div className="flex flex-col justify-between ">
-              <img src={item?.image} className="mb-8 w-auto h-auto max-w-none" alt="" />
-              <p className="text-secondary-gray">29 Mart 2022</p>
+              <img src={item?.attributes?.img} className="mb-8 w-[300px] h-[200px] object-cover max-w-none" alt="" />
+              <p className="text-secondary-gray">{format(new Date(item?.updatedAt), "d MMMM yyyy", { locale: tr })}</p>
             </div>
-            <div>
+            <div className="w-full">
               <div className="flex items-center gap-2 mb-8">
-                <img src={item?.user?.avatar} alt="" />
-                <p>{item?.user?.name}</p>
+                <img src={item?.attributes?.author?.avatar} alt="" />
+                <p>{item?.attributes?.author?.name}</p>
               </div>
               <Link
-                href="/"
+                href={`/blogs/${item?.attributes?.slug}`}
                 className="line-clamp-4 font-saira-condensed text-[25px] font-bold leading-7 uppercase transition duration-300 group-hover:text-main-yellow"
               >
-                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Mauris nec leo non libero sodales lobortis. Quisque a neque preti ...
+                {item?.attributes?.title}
               </Link>
               <div className="h-[1px] w-full bg-secondary-gray my-[30px]"></div>
-              <Link href="/" className="font-saira transition duration-300 group-hover:text-main-yellow flex items-center gap-2 relative">
+              <Link
+                href={`/blogs/${item?.attributes?.slug}`}
+                className="font-saira transition duration-300 group-hover:text-main-yellow flex items-center gap-2 relative"
+              >
                 Daha Fazla Oku
                 <span
                   className="opacity-0 translate-x-[-10px] scale-75 group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100
@@ -38,22 +43,25 @@ export default function DiscoverBlogs({ gridType, blogs }) {
         ) : (
           <div className="flex flex-col gap-5 group" key={item?.id}>
             <div className="flex flex-col justify-between ">
-              <img src={item?.image} className="mb-8 w-auto h-auto max-w-none" alt="" />
-              <p className="text-secondary-gray">29 Mart 2022</p>
+              <img src={item?.attributes?.img} className="mb-8 w-auto h-auto object-cover max-w-none" alt="" />
+              <p className="text-secondary-gray">{format(new Date(item?.updatedAt), "d MMMM yyyy", { locale: tr })}</p>
             </div>
             <div>
               <div className="flex items-center gap-2 mb-8">
-                <img src={item?.user?.avatar} alt="" />
-                <p>{item?.user?.name}</p>
+                <img src={item?.attributes?.author?.avatar} alt="" />
+                <p>{item?.attributes?.author?.name}</p>
               </div>
               <Link
-                href="/"
+                href={`/blogs/${item?.attributes?.slug}`}
                 className="line-clamp-4 font-saira-condensed text-[25px] font-bold leading-7 uppercase transition duration-300 group-hover:text-main-yellow"
               >
-                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Mauris nec leo non libero sodales lobortis. Quisque a neque preti ...
+                {item?.attributes?.title}
               </Link>
               <div className="h-[1px] w-full bg-secondary-gray my-[30px]"></div>
-              <Link href="/" className="font-saira transition duration-300 group-hover:text-main-yellow flex items-center gap-2 relative">
+              <Link
+                href={`/blogs/${item?.attributes?.slug}`}
+                className="font-saira transition duration-300 group-hover:text-main-yellow flex items-center gap-2 relative"
+              >
                 Daha Fazla Oku
                 <span
                   className="opacity-0 translate-x-[-10px] scale-75 group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100

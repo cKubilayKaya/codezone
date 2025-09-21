@@ -4,6 +4,7 @@ export const allBlogs = [
       category: "Türk Rap",
       blogSlide: true,
       blogTrend: false,
+      trend: true,
       tags: ["Yeni Albüm", "Trap Sound", "Klip Yayında"],
       author: {
         name: "Rapkology",
@@ -31,6 +32,7 @@ export const allBlogs = [
       category: "Türk Rap",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Konser", "Freestyle"],
       author: {
         name: "Rapkology",
@@ -58,7 +60,8 @@ export const allBlogs = [
     attributes: {
       category: "Türk Rap",
       blogSlide: false,
-      blogTrend: false,
+      blogTrend: true,
+      trend: false,
       tags: ["Underground", "Battle Rap"],
       author: {
         name: "Rapkology",
@@ -87,6 +90,7 @@ export const allBlogs = [
       category: "Yabancı Rap",
       blogSlide: false,
       blogTrend: false,
+      trend: true,
       tags: ["Yeni Albüm", "Trap Sound", "Konser"],
       author: {
         name: "Rapkology",
@@ -115,6 +119,7 @@ export const allBlogs = [
       category: "Yabancı Rap",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Freestyle", "Battle Rap"],
       author: {
         name: "Rapkology",
@@ -143,6 +148,7 @@ export const allBlogs = [
       category: "Yabancı Rap",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Underground", "Röportaj"],
       author: {
         name: "Rapkology",
@@ -172,6 +178,7 @@ export const allBlogs = [
       category: "Rap Haberleri",
       blogSlide: false,
       blogTrend: false,
+      trend: true,
       tags: ["Yeni Albüm", "Klip Yayında"],
       author: {
         name: "Ayşe Rapçi",
@@ -200,6 +207,7 @@ export const allBlogs = [
       category: "Rap Haberleri",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Freestyle", "Battle Rap"],
       author: {
         name: "Mehmet MC",
@@ -228,6 +236,7 @@ export const allBlogs = [
       category: "Rap Haberleri",
       blogSlide: true,
       blogTrend: false,
+      trend: false,
       tags: ["Röportaj", "Underground"],
       author: {
         name: "Selin Rapper",
@@ -257,6 +266,7 @@ export const allBlogs = [
       category: "Haftanın Klipleri",
       blogSlide: false,
       blogTrend: false,
+      trend: true,
       tags: ["Klip Yayında", "Trap Sound"],
       author: {
         name: "Ali Rapçi",
@@ -285,6 +295,7 @@ export const allBlogs = [
       category: "Haftanın Klipleri",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Yeni Albüm", "Klip Yayında"],
       author: {
         name: "Cem MC",
@@ -313,6 +324,7 @@ export const allBlogs = [
       category: "Haftanın Klipleri",
       blogSlide: false,
       blogTrend: true,
+      trend: false,
       tags: ["Trap Sound", "Freestyle"],
       author: {
         name: "Deniz Rapçi",
@@ -342,6 +354,7 @@ export const allBlogs = [
       category: "Ayın Klipleri",
       blogSlide: false,
       blogTrend: false,
+      trend: true,
       tags: ["Klip Yayında", "Yeni Albüm"],
       author: {
         name: "Furkan MC",
@@ -370,6 +383,7 @@ export const allBlogs = [
       category: "Ayın Klipleri",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Trap Sound", "Klip Yayında"],
       author: {
         name: "Selin Rapper",
@@ -398,6 +412,7 @@ export const allBlogs = [
       category: "Ayın Klipleri",
       blogSlide: false,
       blogTrend: true,
+      trend: false,
       tags: ["Freestyle", "Klip Yayında"],
       author: {
         name: "Cem MC",
@@ -427,6 +442,7 @@ export const allBlogs = [
       category: "Rap Sohbetleri",
       blogSlide: false,
       blogTrend: true,
+      trend: true,
       tags: ["Röportaj", "Underground"],
       author: {
         name: "Ayşe Rapçi",
@@ -455,6 +471,7 @@ export const allBlogs = [
       category: "Rap Sohbetleri",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Röportaj", "Freestyle"],
       author: {
         name: "Mehmet MC",
@@ -483,6 +500,7 @@ export const allBlogs = [
       category: "Rap Sohbetleri",
       blogSlide: false,
       blogTrend: true,
+      trend: false,
       tags: ["Röportaj", "Yeni Albüm"],
       author: {
         name: "Selin Rapper",
@@ -512,6 +530,7 @@ export const allBlogs = [
       category: "Rap Müsabakaları",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Battle Rap", "Freestyle"],
       author: {
         name: "Ali Rapçi",
@@ -540,6 +559,7 @@ export const allBlogs = [
       category: "Rap Müsabakaları",
       blogSlide: true,
       blogTrend: false,
+      trend: false,
       tags: ["Battle Rap", "Konser"],
       author: {
         name: "Furkan MC",
@@ -568,6 +588,7 @@ export const allBlogs = [
       category: "Rap Müsabakaları",
       blogSlide: false,
       blogTrend: false,
+      trend: false,
       tags: ["Freestyle", "Röportaj"],
       author: {
         name: "Selin Rapper",

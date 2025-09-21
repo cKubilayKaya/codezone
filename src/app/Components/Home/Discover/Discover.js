@@ -1,93 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DiscoverHeader from "./DiscoverHeader";
 import DiscoverBlogs from "./DiscoverBlogs";
 import DiscoverSidebar from "./DiscoverSidebar";
+import { allCategories } from "@/data/allCategories";
+import { allBlogs } from "@/data/allBlogs";
 
 export default function Discover() {
   const [gridType, setGridType] = useState("ONE_GRID");
+  const [categories, setCategories] = useState(allCategories);
+  const [activeCategory, setActiveCategory] = useState(allCategories && allCategories[0]);
+  const [blogs, setBlogs] = useState(allBlogs);
+  const [filteredBlogs, setFilteredBlogs] = useState([]);
 
-  const categories = [
-    {
-      id: 1,
-      name: "Türk Rap",
-    },
-    {
-      id: 2,
-      name: "Yabancı Rap",
-    },
-    {
-      id: 3,
-      name: "Rap Haberleri",
-    },
-    {
-      id: 4,
-      name: "Haftanın Klipleri",
-    },
-    {
-      id: 5,
-      name: "Ayın Klipleri",
-    },
-    {
-      id: 6,
-      name: "Rap Sohbetleri",
-    },
-    {
-      id: 7,
-      name: "Rap Müsabakaları",
-    },
-  ];
-
-  const blogs = [
-    {
-      id: 1,
-      image: "/images/discovery-blog-1.png",
-      date: "29 Mart 2022",
-      user: {
-        avatar: "/images/avatar.png",
-        name: "Jonathan Stewart",
-      },
-      title: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.  Mauris nec leo non libero sodales lobortis. Quisque a neque preti ...",
-    },
-    {
-      id: 2,
-      image: "/images/discovery-blog-1.png",
-      date: "29 Mart 2022",
-      user: {
-        avatar: "/images/avatar.png",
-        name: "Jonathan Stewart",
-      },
-      title: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.  Mauris nec leo non libero sodales lobortis. Quisque a neque preti ...",
-    },
-    {
-      id: 3,
-      image: "/images/discovery-blog-1.png",
-      date: "29 Mart 2022",
-      user: {
-        avatar: "/images/avatar.png",
-        name: "Jonathan Stewart",
-      },
-      title: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.  Mauris nec leo non libero sodales lobortis. Quisque a neque preti ...",
-    },
-    {
-      id: 4,
-      image: "/images/discovery-blog-1.png",
-      date: "29 Mart 2022",
-      user: {
-        avatar: "/images/avatar.png",
-        name: "Jonathan Stewart",
-      },
-      title: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.  Mauris nec leo non libero sodales lobortis. Quisque a neque preti ...",
-    },
-  ];
+  useEffect(() => {
+    setFilteredBlogs(blogs.filter((i) => i?.attributes?.category === activeCategory?.name));
+  }, [activeCategory?.id]);
 
   return (
     <div className="container mx-auto my-20 grid grid-cols-[2fr_1fr] gap-30">
       <div>
         <DiscoverHeader gridType={gridType} setGridType={setGridType} />
-        <DiscoverBlogs gridType={gridType} blogs={blogs} />
+        <DiscoverBlogs gridType={gridType} blogs={filteredBlogs} />
       </div>
-      <DiscoverSidebar categories={categories} />
+      <DiscoverSidebar categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
     </div>
   );
 }

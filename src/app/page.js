@@ -8,6 +8,9 @@ export const metadata = {
   title: "Rapkology - Rap Kültürünün İncelikleri, Sanatçı Profil ve Şarkı Analizleri",
   description:
     "Rapkology, rap müziğin derinliklerine dalın. Rap sanatçıları, sözler ve şarkılar hakkında kapsamlı bilgiler, analizler ve daha fazlası. Rap dünyasının incelikleri burada!",
+  alternates: {
+    canonical: "https://codezone-rouge.vercel.app/",
+  },
 };
 
 export default function Home() {

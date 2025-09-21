@@ -41,7 +41,7 @@ export default function DiscoverBlogs({ gridType, blogs }) {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col gap-5 group" key={item?.id}>
+          <div className="flex flex-col gap-5 group" key={item?.attributes?.slug}>
             <div className="flex flex-col justify-between ">
               <img src={item?.attributes?.img} className="mb-8 w-auto h-auto object-cover max-w-none" alt="" />
               <p className="text-secondary-gray">{format(new Date(item?.updatedAt), "d MMMM yyyy", { locale: tr })}</p>

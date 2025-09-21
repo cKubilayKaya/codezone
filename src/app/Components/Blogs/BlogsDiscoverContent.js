@@ -41,7 +41,7 @@ export default function BlogsDiscoverContent({ filteredBlogs, gridType }) {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col gap-5 group" key={item?.id}>
+          <div className="flex flex-col gap-5 group" key={item?.attributes?.slug}>
             <div className="flex items-center gap-2">
               <img src={item?.attributes?.author?.avatar} alt="" />
               <p>{item?.attributes?.author?.name}</p>

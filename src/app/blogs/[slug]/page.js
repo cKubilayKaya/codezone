@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
       blog?.attributes?.seo?.metaDescription ||
       "Rapkology Müzik sayfasında en yeni rap şarkıları, müzik videoları ve rap müziği dünyasının en taze melodileriyle tanışın. Rap müziğin ritmini keşfedin ve en sevdiğiniz sanatçıların en son müzikleri hakkında bilgilere ulaşın.",
     alternates: {
-      canonical: blog ? `https://www.rapkology.com/blogs/${blog?.attributes?.seo?.canonicalURL}` : "https://www.rapkology.com",
+      canonical: blog ? `https://codezone-rouge.vercel.app/blogs/${blog?.attributes?.seo?.canonicalURL}` : "https://codezone-rouge.vercel.app",
     },
   };
 }

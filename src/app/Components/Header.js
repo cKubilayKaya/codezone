@@ -39,10 +39,7 @@ export default function Header() {
       <button className="cursor-pointer">
         <HeaderSearch />
       </button>
-      <Link
-        href="/giris-yap"
-        className="font-bold w-[120px] h-[40px] bg-white flex items-center justify-center text-black transition duration-300 hover:bg-main-yellow"
-      >
+      <Link href="/" className="font-bold w-[120px] h-[40px] bg-white flex items-center justify-center text-black transition duration-300 hover:bg-main-yellow">
         GİRİŞ YAP
       </Link>
     </div>

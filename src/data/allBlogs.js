@@ -502,7 +502,7 @@ export const allBlogs = [
     attributes: {
       category: "Haftanın Klipleri",
       blogSlide: false,
-      blogTrend: true,
+      blogTrend: false,
       view: 42.105,
       likes: 55,
       comments: 20,

@@ -12,10 +12,10 @@ export default function Trends({ cols = 3 }) {
   return (
     <div className="container mx-auto my-20 font-saira-condensed">
       <div className="flex items-center gap-5 mb-20">
-        <h2 className="font-bold text-6xl ">TRENDLER</h2>
-        <TrendsIcon />
+        <h2 className="font-bold text-4xl md:text-6xl">TRENDLER</h2>
+        <TrendsIcon className="w-[36px] h-[36px] md:w-[55px] md:h-[55px]" />
       </div>
-      <div className={`grid grid-cols-${cols} gap-x-5 gap-y-10 mb-20`}>
+      <div className={`grid grid-cols-1 ${cols === 3 && "lg:grid-cols-3"} ${cols === 2 && "lg:grid-cols-2"} sm:grid-cols-2  gap-x-5 gap-y-10 mb-20`}>
         {trends.map((item, index) => (
           <div key={item?.attributes?.slug} className="min-h-[190px] flex gap-16 group">
             <div>

@@ -1,8 +1,8 @@
-import Banner from "./Components/Banner";
-import Discover from "./Components/Discover";
-import Favorites from "./Components/Favorites";
-import Live from "./Components/Live";
-import Trends from "./Components/Trends";
+import Banner from "./Components/Home/Banner";
+import Discover from "./Components/Home/Discover/Discover";
+import Trends from "./Components/Home/Trends";
+import Live from "./Components/Home/Live";
+import Favorites from "./Components/Home/Favorites";
 
 export default function Home() {
   return (

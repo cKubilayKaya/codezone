@@ -50,7 +50,6 @@ export default function Favorites() {
             className="w-full"
             onSlideChange={(swiper) => {
               setActiveIndex(swiper.realIndex);
-              console.log(swiper.activeIndex, activeIndex);
             }}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >

@@ -1,8 +1,8 @@
 import React from "react";
-import TrendsIcon from "../icons/TrendsIcon";
+import TrendsIcon from "../../icons/TrendsIcon";
 import Link from "next/link";
-import CustomButton from "./CustomButton";
-import ArrowRightIcon from "../icons/ArrowRightIcon";
+import CustomButton from "../CustomButton";
+import ArrowRightIcon from "../../icons/ArrowRightIcon";
 
 export default function Trends() {
   const trends = [

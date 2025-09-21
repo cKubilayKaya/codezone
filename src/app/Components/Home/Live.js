@@ -18,7 +18,7 @@ export default function Live() {
           <img src="/images/takip-et.png" alt="" />
         </div>
       </div>
-      <div className="flex items-center justify-between absolute w-[80%] top-20 left-1/2 transform -translate-x-1/2  z-50">
+      <div className="flex items-center justify-between absolute w-[80%] top-20 left-1/2 transform -translate-x-1/2  z-10">
         <img src="/images/rapper-1.png" alt="" />
         <img src="/images/rapper-2.png" alt="" />
       </div>

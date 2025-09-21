@@ -2,8 +2,11 @@
 
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import CustomButton from "../CustomButton";
 import "swiper/css";
+import SlideNextIcon from "@/app/icons/SlideNextIcon";
+import SlidePrevIcon from "@/app/icons/SlidePrevIcon";
 
 export default function Banner() {
   const swiperRef = useRef(null);
@@ -26,12 +29,33 @@ export default function Banner() {
     },
   ];
 
+  const CustomPrevArrow = ({ onClick }) => (
+    <button onClick={onClick} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12  items-center justify-center cursor-pointer hidden lg:flex">
+      <SlidePrevIcon />
+    </button>
+  );
+
+  const CustomNextArrow = ({ onClick }) => (
+    <button onClick={onClick} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12  items-center justify-center cursor-pointer hidden lg:flex">
+      <SlideNextIcon />
+    </button>
+  );
+
   return (
     <div className="relative pb-10">
+      <CustomPrevArrow onClick={() => swiperRef.current?.slidePrev()} />
+      <CustomNextArrow onClick={() => swiperRef.current?.slideNext()} />
+
       <Swiper
         className=""
         spaceBetween={0}
+        loop={true}
         slidesPerView={1}
+        modules={[Navigation]}
+        navigation={{
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
+        }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >

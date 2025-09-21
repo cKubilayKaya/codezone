@@ -54,7 +54,7 @@ export default function BlogsSlider({ slidersBlogs, trendBlogs }) {
         <div className="flex flex-col gap-8">
           {trendBlogs?.map((item) => (
             <div className="flex gap-5 flex-col sm:flex-row" key={item?.attributes?.slug}>
-              <img src={item?.attributes?.img} className="w-[175px] h-[104px]" alt="" />
+              <img src={item?.attributes?.img} className="w-full sm:w-[175px] h-full sm:h-[104px]" alt="" />
               <Link
                 href={`/blogs/${item?.attributes?.slug}`}
                 className="leading-6 font-saira-condensed font-bold text-[20px] sm:text-[25px] text-main-black uppercase"

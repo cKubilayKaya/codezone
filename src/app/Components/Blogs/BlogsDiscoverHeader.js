@@ -6,10 +6,10 @@ import React from "react";
 
 export default function BlogsDiscoverHeader({ gridType, setGridType }) {
   return (
-    <div className="flex items-center justify-between mb-13">
+    <div className="flex items-center justify-between mb-13 mt-12 md:mt-0">
       <div className="flex items-center gap-5">
         <h2 className="font-saira-condensed font-bold text-4xl md:text-6xl">KEŞFET</h2>
-        <CompassIcon />
+        <CompassIcon className="w-[36px] h-[36px] md:w-[55px] md:h-[55px]" />
       </div>
       <div className="flex items-center justify-center gap-4">
         <button className="cursor-pointer">

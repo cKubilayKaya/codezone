@@ -21,14 +21,15 @@ export default function BlogsDiscoverCategories({ categories, setActiveCategory,
         <Swiper loop={true} spaceBetween={20} slidesPerView="auto" className="w-full" touchStartPreventDefault={false} preventClicksPropagation={false}>
           {categories?.map((item) => (
             <SwiperSlide key={item?.id} className="!w-auto">
-              <button
+              <div
+                role="button"
                 onClick={() => setActiveCategory(item)}
                 className={`py-[10px] px-5 border cursor-pointer hover:bg-main-gray ${
                   activeCategory?.id === item?.id ? "bg-main-yellow text-main-black border-main-yellow hover:bg-main-yellow whitespace-nowrap" : "border-white"
                 }`}
               >
                 {item?.name}
-              </button>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

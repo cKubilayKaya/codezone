@@ -11,7 +11,7 @@ export default function BlogsDiscoverContent({ filteredBlogs, gridType }) {
         gridType === "ONE_GRID" ? (
           <div className="flex gap-5 group flex-col lg:flex-row" key={item?.attributes?.slug}>
             <div className="flex flex-col justify-between ">
-              <img src={item?.attributes?.img} className="mb-8 w-full sm:w-[300px] h-[200px] object-cover max-w-none" alt="" />
+              <img src={item?.attributes?.img} className="mb-8 w-full h-[200px] object-cover max-w-none" alt="" />
               <p className="text-secondary-gray">{format(new Date(item?.updatedAt), "d MMMM yyyy", { locale: tr })}</p>
             </div>
             <div className="w-full">

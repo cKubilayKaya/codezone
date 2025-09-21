@@ -1,6 +1,6 @@
 # Codezone Vaka Çalışması
 
-## [Vercel Linki](https://markdownlivepreview.com/)
+## [Vercel Linki](https://codezone-rouge.vercel.app)
 
 ## Özellikler
 

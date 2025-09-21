@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import HeaderSearch from "./icons/HeaderSearch";
-import MenuIcon from "./icons/MenuIcon";
-import useWindowWidth from "./customHooks/useWindowWidth";
-import CloseIcon from "./icons/CloseIcon";
+import MenuIcon from "../icons/MenuIcon";
+import useWindowWidth from "../customHooks/useWindowWidth";
+import CloseIcon from "../icons/CloseIcon";
+import HeaderSearch from "../icons/HeaderSearch";
 
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -62,7 +62,9 @@ export default function Header() {
     >
       <div className="min-h-[80px] container flex items-center justify-between mb-auto">
         <div className="flex items-center">
-          <Image src="/images/header-logo.png" alt="Logo" width={235} height={60} />
+          <Link href="/">
+            <Image src="/images/header-logo.png" alt="Logo" width={235} height={60} />
+          </Link>
           <nav className="ml-[24px] xl:ml-[96px] items-center gap-[30px] hidden lg:flex">
             {menuLinks?.map((menu) => (
               <Link href={menu?.id} className="font-saira text-[14px] transition duration-300 hover:text-main-yellow" key={menu?.id}>

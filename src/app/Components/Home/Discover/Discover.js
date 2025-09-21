@@ -5,6 +5,7 @@ import DiscoverBlogs from "./DiscoverBlogs";
 import DiscoverSidebar from "./DiscoverSidebar";
 import { allCategories } from "@/data/allCategories";
 import { allBlogs } from "@/data/allBlogs";
+import DiscoverCategories from "./DiscoverCategories";
 
 export default function Discover() {
   const [gridType, setGridType] = useState("ONE_GRID");
@@ -18,7 +19,10 @@ export default function Discover() {
   }, [activeCategory?.id]);
 
   return (
-    <div className="container mx-auto my-20 grid grid-cols-[2fr_1fr] gap-30">
+    <div className="container mx-auto my-20 grid grid-cols-1 xl:grid-cols-[2fr_1fr] gap-30">
+      <div className="block xl:hidden">
+        <DiscoverCategories categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+      </div>
       <div>
         <DiscoverHeader gridType={gridType} setGridType={setGridType} />
         <DiscoverBlogs gridType={gridType} blogs={filteredBlogs} />

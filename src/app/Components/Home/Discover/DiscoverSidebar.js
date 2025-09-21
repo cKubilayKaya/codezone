@@ -6,25 +6,15 @@ import TwitterIcon from "@/app/icons/TwitterIcon";
 import YoutubeIcon from "@/app/icons/YoutubeIcon";
 import Link from "next/link";
 import React from "react";
+import DiscoverCategories from "./DiscoverCategories";
 
 export default function DiscoverSidebar({ categories, activeCategory, setActiveCategory }) {
   return (
     <div>
-      <h2 className="font-saira-condensed font-bold text-[40px] leading-10 mb-5">NE GÖRMEK İSTERSİN?</h2>
-      <div className="flex items-center flex-wrap gap-[10px] mb-[200px]">
-        {categories?.map((item) => (
-          <button
-            key={item?.id}
-            onClick={() => setActiveCategory(item)}
-            className={`py-[10px] px-5 border  cursor-pointer hover:bg-main-gray ${
-              activeCategory?.id === item?.id ? "bg-main-yellow text-main-black border-main-yellow hover:bg-main-yellow" : "border-white"
-            }`}
-          >
-            {item?.name}
-          </button>
-        ))}
+      <div className="hidden xl:block">
+        <DiscoverCategories categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
       </div>
-      <h2 className="font-saira-condensed font-bold text-[40px] leading-10 mb-12">GELİŞMELERDEN İLK SEN HABERDAR OL!</h2>
+      <h2 className="font-saira-condensed font-bold text-[40px] leading-10 mb-12 xl:mt-[200px]">GELİŞMELERDEN İLK SEN HABERDAR OL!</h2>
       <div className="w-full relative mb-12">
         <input type="text" className="border-b h-[38px] border-b-secondary-gray w-full outline-0 p-2 font-saira text-sm font-bold" placeholder="EMAIL" />
         <button className="h-[38px] flex items-center gap-3 absolute right-0 top-0 bottom-0 m-auto cursor-pointer">

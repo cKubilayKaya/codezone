@@ -6,12 +6,12 @@ import { tr } from "date-fns/locale";
 
 export default function DiscoverBlogs({ gridType, blogs }) {
   return (
-    <div className={gridType === "ONE_GRID" ? "flex flex-col gap-20" : "grid grid-cols-2 gap-5"}>
+    <div className={gridType === "ONE_GRID" ? "flex flex-col gap-10" : "grid grid-cols-1 sm:grid-cols-2 gap-5"}>
       {blogs.map((item) =>
         gridType === "ONE_GRID" ? (
-          <div className="flex gap-5 group" key={item?.attributes?.slug}>
+          <div className="flex gap-5 group flex-col sm:flex-row" key={item?.attributes?.slug}>
             <div className="flex flex-col justify-between ">
-              <img src={item?.attributes?.img} className="mb-8 w-[300px] h-[200px] object-cover max-w-none" alt="" />
+              <img src={item?.attributes?.img} className="mb-8 w-full sm:w-[300px] h-full sm:h-[200px] object-cover max-w-none" alt="" />
               <p className="text-secondary-gray">{format(new Date(item?.updatedAt), "d MMMM yyyy", { locale: tr })}</p>
             </div>
             <div className="w-full">

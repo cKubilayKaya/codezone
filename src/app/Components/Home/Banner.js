@@ -37,13 +37,22 @@ export default function Banner() {
       >
         {slides.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="py-8 relative min-h-[700px]">
-              <img src={item.image} className="absolute top-0 left-0" alt="" />
-              <div className="w-[570px] absolute right-16 top-1/2 -translate-y-1/2 mt-10  z-3">
-                <h2 className={`font-bold text-5xl leading-14 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.title}</h2>
-                <p className={`mt-6 w-[80%] mb-6 ${item?.textColor === "white" ? "text-foreground" : "text-background"}`}>{item.text}</p>
+            <div className="py-8 relative min-h-[700px] flex flex-col-reverse lg:flex-row">
+              <div className="">
+                <img src={item.image} className="lg:absolute top-0 left-0" alt="" />
+                <img src="/images/slider-bg.png" className="absolute lg:absolute bottom-5 lg:bottom-0 left-0 w-full" alt="" />
+              </div>
+              <div className="lg:w-[570px] lg:absolute lg:right-16 lg:top-1/2 lg:-translate-y-1/2 mt-20 text-center lg:text-left lg:mt-10 z-3">
+                <h2
+                  className={`font-bold text-[30px] lg:text-5xl leading-8 mb-4 lg:leading-14 ${
+                    item?.textColor === "white" ? "text-foreground" : "lg:text-background"
+                  }`}
+                >
+                  {item.title}
+                </h2>
+                <p className={`lg:mt-6 lg:w-[80%] mb-6 ${item?.textColor === "white" ? "text-foreground" : "lg:text-background"}`}>{item.text}</p>
                 <CustomButton />
-                <div className="flex items-center mt-14 gap-2">
+                <div className="items-center mt-14 gap-2 hidden lg:flex">
                   {slides.map((item, index) => (
                     <button
                       key={item.id}
@@ -55,9 +64,6 @@ export default function Banner() {
                   ))}
                 </div>
               </div>
-            </div>
-            <div className="mt-10">
-              <img src="/images/slider-bg.png" className="absolute bottom-0 left-0 z-2 w-full" alt="" />
             </div>
           </SwiperSlide>
         ))}

@@ -30,7 +30,7 @@ export default function BlogDetailContent({ breadcrumbData, blog, allBlogs }) {
         <p>{blog?.attributes?.view}</p>
       </div>
 
-      <h2 className="font-saira-condensed font-bold text-6xl mb-8 uppercase">{blog?.attributes?.title}</h2>
+      <h2 className="font-saira-condensed font-bold text-5xl md:text-6xl mb-8 uppercase">{blog?.attributes?.title}</h2>
 
       <div dangerouslySetInnerHTML={{ __html: blog?.attributes?.content }} />
 
@@ -54,7 +54,7 @@ export default function BlogDetailContent({ breadcrumbData, blog, allBlogs }) {
       </div>
 
       <div>
-        <h2 className="font-bold font-saira-condensed text-6xl mb-16">DAHA FAZLA İÇERİK</h2>
+        <h2 className="font-bold font-saira-condensed text-4xl md:text-6xl mb-16">DAHA FAZLA İÇERİK</h2>
         <div className="flex flex-col gap-8">
           {randomBlogs?.map((item) => (
             <div key={item?.attributes?.slug} className="flex items-center gap-5 group w-full border-b border-b-secondary-gray pb-8 last:border-b-0">

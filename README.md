@@ -1,6 +1,6 @@
 # Codezone Vaka Çalışması
 
-## [Canlı Link](https://markdownlivepreview.com/)
+## [Vercel Linki](https://markdownlivepreview.com/)
 
 ## Özellikler
 

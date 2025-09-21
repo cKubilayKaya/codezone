@@ -27,7 +27,7 @@ export const allBlogs = [
           orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non efficitur
           id, ultricies vel nibh.
         </p>
-        <img src="/images/blog-detail-image.png" alt="" />
+        <img src="https://res.cloudinary.com/dgbjlgpfh/image/upload/v1753636962/softawe/bcy.jpg.webp" alt="" />
         <p>
           Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus, magna
           id scelerisque vestibulum, nulla ex pharetra sapien, tempor posuere massa neque nec felis. Aliquam sem ipsum, vehicula ac tortor vel, egestas

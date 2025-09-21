@@ -55,7 +55,7 @@ export default function Header() {
     <div
       className={`${
         menuActive && "min-h-[400px]"
-      } lg:min-h-[80px] fixed top-0 left-0 w-full z-30 backdrop-blur-md bg-main-black-op flex items-center justify-center`}
+      } lg:min-h-[80px] fixed top-0 left-0 w-full z-[999] backdrop-blur-md bg-main-black-op flex items-center justify-center`}
     >
       <div className="min-h-[80px] container flex items-center justify-between mb-auto">
         <div className="flex items-center">

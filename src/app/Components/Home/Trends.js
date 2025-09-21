@@ -17,7 +17,7 @@ export default function Trends({ cols = 3 }) {
       </div>
       <div className={`grid grid-cols-1 ${cols === 3 && "lg:grid-cols-3"} ${cols === 2 && "lg:grid-cols-2"} sm:grid-cols-2  gap-x-5 gap-y-10 mb-20`}>
         {trends.map((item, index) => (
-          <div key={item?.attributes?.slug} className="min-h-[190px] flex gap-4 lg:gap-16 group">
+          <div key={item?.attributes?.slug} className="min-h-[190px] flex gap-8 lg:gap-16 group">
             <div>
               <h2 className="text-main-gray font-bold text-6xl transition duration-300 group-hover:text-main-yellow">0{index + 1}</h2>
             </div>
